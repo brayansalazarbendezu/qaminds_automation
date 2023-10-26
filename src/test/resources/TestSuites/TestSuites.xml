@@ -14,10 +14,10 @@
         </classes>
     </test>
 
-    <test name="Test4AbrirCuenta">
+    <test name="Test3ValidarFormularios">
         <parameter name="platform" value="desktop"/>
         <classes>
-            <class name="Bcp.Header.Test4AbrirCuenta"/>
+            <class name="Bcp.Header.Test3ValidarFormularios"/>
         </classes>
     </test>
 

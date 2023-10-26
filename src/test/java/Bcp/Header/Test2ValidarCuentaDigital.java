@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
     @Slf4j
     public class Test2ValidarCuentaDigital extends BaseTest {
 
-        @Test
+        @Test // Test para validar la lista de Productos
         public void ValidarCuentaDigital() {
             log.info("Step 1: Navigate to viabcp.com");
             navigateTo("www.viabcp.com");
@@ -41,11 +41,6 @@ import static org.assertj.core.api.Assertions.assertThat;
             cuentadigital.clickcuentadigital();
             System.out.println(Screenshot.screenshot(getDriver()));
 
-          /*  WebElement menuElement = getDriver().findElement(By.cssSelector("#uhf-g-nav > ul"));
-            List<String> mylist = menuElement.findElements(By.tagName("a")).stream()
-                    .map(WebElement::getText)
-                    .collect(Collectors.toList());*/
-
            log.info("Step 6 : Validar titulo Beneficios");
             assertThat(cuentadigital.labelTitleBeneficiosGetText("#bcp-mean-content > div > div.component-control.id-Z7_0064I3S0M86SC0AR690A0V0SU0 > section > div.wpthemeControlBody._wpthemeOverflowAuto_.wpthemeClear > main > div.container.bcp_grupo_titulos > div:nth-child(1) > div > h3 > p > span"))
                     .as("El titulo del producto no es el esperado")
@@ -65,15 +60,6 @@ import static org.assertj.core.api.Assertions.assertThat;
             assertThat(cuentadigital.labelTitlePreguntasGetText())
                     .as("El titulo del producto no es el esperado")
                     .isEqualTo("Preguntas Frecuentes");
-
-            log.info("Step 7 : Dar click en Abrir Cuenta");
-            PageAbreTuCuenta abreTuCuenta = new PageAbreTuCuenta(getDriver());
-            abreTuCuenta.clickabretucuenta();
-            System.out.println(Screenshot.screenshot(getDriver()));
-
-            log.info("Step 8: valor Correo");
-            abreTuCuenta.clicCorreoElectronico("brayansalazar@gmail.com");
-            System.out.println(Screenshot.screenshot(getDriver()));
 
         }
     }
