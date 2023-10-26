@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SuiteViaBCP">
+
+    <test name="TestProductos">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="Bcp.Header.Test1ValidarListProducts"/>
+        </classes>
+    </test>
+    <test name="Test2CuentaPage">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="Bcp.Header.Test2ValidarCuentaDigital"/>
+        </classes>
+    </test>
+
+    <test name="Test4AbrirCuenta">
+        <parameter name="platform" value="desktop"/>
+        <classes>
+            <class name="Bcp.Header.Test4AbrirCuenta"/>
+        </classes>
+    </test>
+
+</suite>
